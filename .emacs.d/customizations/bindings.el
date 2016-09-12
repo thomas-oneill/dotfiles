@@ -3,10 +3,12 @@
 (fset 'prev-line-x9
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("9" 0 "%d")) arg)))
 
-(global-set-key (kbd "C-M-n") 'next-line-x9)
-(global-set-key (kbd "C-M-p") 'prev-line-x9)
+(global-set-key (kbd "M-N") 'next-line-x9)
+(global-set-key (kbd "M-P") 'prev-line-x9)
 (global-set-key (kbd "C-k") 'kill-whole-line)
 (global-set-key (kbd "C-c C-n") 'linum-mode)
+(global-set-key (kbd "M-n") 'next-line)
+(global-set-key (kbd "M-p") 'previous-line)
 
 ;; Behave like vi's o command
 (defun open-next-line (arg)
