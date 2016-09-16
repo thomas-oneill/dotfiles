@@ -40,3 +40,6 @@
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
+
+(define-key ctl-x-4-map "t" 'toggle-window-split)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
