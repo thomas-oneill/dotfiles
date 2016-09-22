@@ -23,10 +23,3 @@
 		  (select-window first-win)
 		    (if this-win-2nd (other-window 1))))))
 
-(defun pipe-region-to-xclip ()
-  (interactive)
-  (shell-command-on-region (region-beginning)
-						   (region-end)
-						   "xclip -selection clipboard")
-  (keyboard-quit))
-
