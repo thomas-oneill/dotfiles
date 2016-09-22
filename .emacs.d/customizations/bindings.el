@@ -5,7 +5,7 @@
 
 (global-set-key (kbd "M-N") 'next-line-x9)
 (global-set-key (kbd "M-P") 'prev-line-x9)
-(global-set-key (kbd "C-k") 'kill-whole-line)
+(global-set-key (kbd "C-K") 'kill-whole-line)
 (global-set-key (kbd "C-c C-n") 'linum-mode)
 (global-set-key (kbd "M-n") 'next-line)
 (global-set-key (kbd "M-p") 'previous-line)
