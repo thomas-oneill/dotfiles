@@ -139,8 +139,9 @@
 (load "setup-clojure.el")
 (load "setup-web.el")
 ;; (load "setup-js.el")
+(load "slime.el")
 
 (load "global-settings.el")
 (load "functions.el")
 (load "bindings.el")
-(load "slime.el")
+

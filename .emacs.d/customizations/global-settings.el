@@ -36,3 +36,6 @@
 (evil-mode 1)
 (setq-default tab-width 4)
 (setq evil-default-state 'emacs)
+(tool-bar-mode 0)
+(blink-cursor-mode 1)
+(setq blink-cursor-blinks 0)
