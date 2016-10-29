@@ -39,3 +39,4 @@
 (tool-bar-mode 0)
 (blink-cursor-mode 1)
 (setq blink-cursor-blinks 0)
+(desktop-save-mode 1)

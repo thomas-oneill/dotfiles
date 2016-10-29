@@ -74,6 +74,9 @@
 
 	;; Web mode for HTML/JS/CSS
 	web-mode
+
+	;; Geiser for Scheme
+	geiser
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
