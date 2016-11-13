@@ -77,6 +77,9 @@
 
 	;; Geiser for Scheme
 	geiser
+
+	;; Company for auto-completion
+	company
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -136,7 +139,7 @@
 ;; (load "misc.el")
 
 ;; For editing lisps
-;; (load "elisp-editing.el")
+(load "elisp-editing.el")
 
 ;; Langauage-specific
 (load "setup-clojure.el")
@@ -147,4 +150,4 @@
 (load "global-settings.el")
 (load "functions.el")
 (load "bindings.el")
-
+(load "setup-scheme.el")

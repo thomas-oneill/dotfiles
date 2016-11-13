@@ -9,6 +9,7 @@
 (global-set-key (kbd "C-c C-n") 'linum-mode)
 (global-set-key (kbd "M-n") 'next-line)
 (global-set-key (kbd "M-p") 'previous-line)
+(global-set-key (kbd "C-x C-;") 'comment-or-uncomment-region)
 
 ;; Behave like vi's o command
 (defun open-next-line (arg)
