@@ -80,6 +80,12 @@
 
 	;; Company for auto-completion
 	company
+
+	;; Golang support
+	go-mode
+
+	;; Terraform
+	terraform-mode
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -132,8 +138,6 @@
 ;; some user interface elements
 (load "ui.el")
 
-;; These customizations make editing a bit nicer.
-;; (load "editing.el")
 
 ;; Hard-to-categorize customizations
 ;; (load "misc.el")
@@ -151,3 +155,26 @@
 (load "functions.el")
 (load "bindings.el")
 (load "setup-scheme.el")
+
+;; These customizations make editing a bit nicer.
+(load "editing.el")
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(cider-cljs-lein-repl
+   "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/start-figwheel!) (figwheel-sidecar.repl-api/cljs-repl))")
+ '(package-selected-packages
+   (quote
+    (web-mode tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous evil clojure-mode-extra-font-locking cider 0blayout))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; (setq lisp-indent-offset 2)
+(put 'upcase-region 'disabled nil)

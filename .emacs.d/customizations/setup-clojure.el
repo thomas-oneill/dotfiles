@@ -4,26 +4,29 @@
 
 ;; Enable paredit for Clojure
 (add-hook 'clojure-mode-hook 'enable-paredit-mode)
+(add-hook 'clojurescript-mode-hook 'enable-paredit-mode)
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
 (add-hook 'clojure-mode-hook 'subword-mode)
 
+(add-hook 'clojure-mode-hook 'cider-mode)
+
 ;; A little more syntax highlighting
 (require 'clojure-mode-extra-font-locking)
 
 ;; syntax hilighting for midje
-(add-hook 'clojure-mode-hook
-          (lambda ()
-            (setq inferior-lisp-program "lein repl")
-            (font-lock-add-keywords
-             nil
-             '(("(\\(facts?\\)"
-                (1 font-lock-keyword-face))
-               ("(\\(background?\\)"
-                (1 font-lock-keyword-face))))
-            (define-clojure-indent (fact 1))
-            (define-clojure-indent (facts 1))))
+;; (add-hook 'clojure-mode-hook
+;;           (lambda ()
+;;             (setq inferior-lisp-program "lein repl")
+;;             (font-lock-add-keywords
+;;              nil
+;;              '(("(\\(facts?\\)"
+;;                 (1 font-lock-keyword-face))
+;;                ("(\\(background?\\)"
+;;                 (1 font-lock-keyword-face))))
+;;             (define-clojure-indent (fact 1))
+;;             (define-clojure-indent (facts 1))))
 
 ;;;;
 ;; Cider
@@ -82,3 +85,11 @@
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
 
 (setq cider-repl-use-pretty-printing t)
+
+(setq clojure-defun-style-default-indent t)
+
+(require 'cider)
+(setq cider-cljs-lein-repl
+      "(do (require 'figwheel-sidecar.repl-api)
+           (figwheel-sidecar.repl-api/start-figwheel!)
+           (figwheel-sidecar.repl-api/cljs-repl))")

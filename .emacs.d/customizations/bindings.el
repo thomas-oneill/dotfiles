@@ -10,6 +10,8 @@
 (global-set-key (kbd "M-n") 'next-line)
 (global-set-key (kbd "M-p") 'previous-line)
 (global-set-key (kbd "C-x C-;") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-x C-h") 'select-current-line)
+
 
 ;; Behave like vi's o command
 (defun open-next-line (arg)
