@@ -11,7 +11,8 @@
 (global-set-key (kbd "M-p") 'previous-line)
 (global-set-key (kbd "C-x C-;") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-x C-h") 'select-current-line)
-
+(global-set-key (kbd "s-<") 'beginning-of-buffer)
+(global-set-key (kbd "s->") 'end-of-buffer)
 
 ;; Behave like vi's o command
 (defun open-next-line (arg)

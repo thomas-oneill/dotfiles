@@ -149,12 +149,12 @@
 (load "setup-clojure.el")
 (load "setup-web.el")
 ;; (load "setup-js.el")
-(load "slime.el")
+;; (load "slime.el")
 
 (load "global-settings.el")
 (load "functions.el")
 (load "bindings.el")
-(load "setup-scheme.el")
+;; (load "setup-scheme.el")
 
 ;; These customizations make editing a bit nicer.
 (load "editing.el")
