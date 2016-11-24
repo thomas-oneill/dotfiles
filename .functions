@@ -1,0 +1,29 @@
+#!/bin/bash
+source .secrets
+PWWWW=$CLARA_AD
+echo $PWWWW
+
+
+# Create a new directory and enter it
+mkd() {
+	mkdir -p "$@" && cd "$@"
+}
+
+cms() {
+	source ~/resty
+	case $1 in
+		live) resty https://cms-api.eu.clara.net/loki/rest -u "thomas.oneill:$PWWWW" ;;
+		staging) resty https://cms-api-staging.star.net.uk/loki/rest -u "thomas.oneill:$PWWWW" ;;
+		dev) resty http://localhost:8080/loki/rest -u "thomas.oneill:$PWWWW" ;;
+	esac
+}
+
+pb () {
+    curl -F "c=@${1:--}" https://ptpb.pw/
+}
+
+last_container() {
+	docker ps -a | awk "FNR == 2 {print \$(NF)}" 
+}
+
+ppid () { ps -p ${1:-$$} -o ppid=; }

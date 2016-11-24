@@ -1,0 +1,3 @@
+split-window -v
+split-window -h -t 0
+split-window -h -t 1
