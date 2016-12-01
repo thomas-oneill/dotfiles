@@ -15,4 +15,3 @@ set t_Co=256
 colorscheme wombat256mod
 set secure
 set exrc
-set clipboard=unnamed
