@@ -81,11 +81,13 @@
 	;; Company for auto-completion
 	company
 
-	;; Golang support
+	;; Golang
 	go-mode
+	company-go
 
 	;; Terraform
 	terraform-mode
+
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -98,6 +100,14 @@
 ;; https://github.com/purcell/exec-path-from-shell
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize)
+  (setq ns-function-modifier 'control)
+  (setq mac-option-key-is-meta nil)
+  (setq mac-command-key-is-meta t)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier nil))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -142,12 +152,15 @@
 ;; Hard-to-categorize customizations
 ;; (load "misc.el")
 
+(load "lazy-set-key.el")
+
 ;; For editing lisps
 (load "elisp-editing.el")
 
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-web.el")
+(load "setup-go.el")
 ;; (load "setup-js.el")
 ;; (load "slime.el")
 
