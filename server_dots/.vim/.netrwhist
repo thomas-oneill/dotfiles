@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/toneill/workspace/develop/selfservice/war/WEB-INF/classes/uk/net/star/selfservice'
+let g:netrw_dirhist_2='/home/toneill/workspace/develop/selfservice/war/WEB-INF/classes/uk/net/star/selfservice/client'
+let g:netrw_dirhist_3='/home/toneill/exa/docker/compose/gdnsukxx/gdnsd1/zones'
