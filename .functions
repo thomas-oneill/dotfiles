@@ -6,11 +6,11 @@ mkd() {
 }
 
 cms() {
-	source ~/resty
+    source ~/resty
 	case $1 in
-		live) resty https://cms-api.eu.clara.net/loki/rest -u "thomas.oneill:$PWWWW" ;;
-		staging) resty https://cms-api-staging.star.net.uk/loki/rest -u "thomas.oneill:$PWWWW" ;;
-		dev) resty http://localhost:8080/loki/rest -u "thomas.oneill:$PWWWW" ;;
+        live) resty https://cms-api.eu.clara.net/loki/rest -u "$USER:$(pass clara/ad/$USER)" ;;
+        staging) resty https://cms-api-staging.star.net.uk/loki/rest -u "$USER:$(pass clara/ad/$USER)" ;;
+        dev) resty http://localhost:8080/loki/rest -u "$USER:$(pass clara/ad/$USER)" ;;
 	esac
 }
 
@@ -21,4 +21,6 @@ ptpb() {
 ppid() { ps -p ${1:-$$} -o ppid=; }
 
 cperr() { "$@" 2>&1 | >/dev/null pbcopy; }
+
+al() { ag "$@" --pager='less -R'; }
 
