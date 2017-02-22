@@ -2,10 +2,17 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{aliases,bash_prompt,exports,functions,path,secrc}; do
-	[[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
-done
-unset file
+case $SHELL in
+*/sh)
+  ;;
+*/zsh)
+  ;;
+*/bash)
+  for file in ~/.{aliases,bash_prompt,exports,functions,path,secrc}; do
+    [[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
+  done
+  unset file
+esac
 
 # Test for an interactive shell.  There is no need to set anything
 # past this point for scp and rcp, and it's important to refrain from

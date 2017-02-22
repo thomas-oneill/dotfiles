@@ -88,6 +88,15 @@
 	;; Terraform
 	terraform-mode
 
+    elpy
+
+    yaml-mode
+
+    alda-mode
+
+    dockerfile-mode
+
+    jinja2-mode
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -101,6 +110,10 @@
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
 
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize)
   (setq ns-function-modifier 'control)
@@ -108,11 +121,6 @@
   (setq mac-command-key-is-meta t)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier nil))
-
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
-
 
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
 ;; to load them.
@@ -148,10 +156,8 @@
 ;; some user interface elements
 (load "ui.el")
 
-
 ;; Hard-to-categorize customizations
 ;; (load "misc.el")
-
 (load "lazy-set-key.el")
 
 ;; For editing lisps
@@ -181,7 +187,7 @@
    "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/start-figwheel!) (figwheel-sidecar.repl-api/cljs-repl))")
  '(package-selected-packages
    (quote
-    (web-mode tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous evil clojure-mode-extra-font-locking cider 0blayout))))
+    (elpy web-mode terraform-mode tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous geiser exec-path-from-shell evil company-go clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -191,3 +197,5 @@
 
 ;; (setq lisp-indent-offset 2)
 (put 'upcase-region 'disabled nil)
+
+(elpy-enable)
