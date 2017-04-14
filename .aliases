@@ -2,3 +2,4 @@
 
 alias ls='ls --color=always'
 alias xc='xclip -selection clipboard'
+alias less='less -R'
