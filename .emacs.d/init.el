@@ -97,6 +97,8 @@
     dockerfile-mode
 
     jinja2-mode
+
+    auctex
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -167,6 +169,7 @@
 (load "setup-clojure.el")
 (load "setup-web.el")
 (load "setup-go.el")
+(load "setup-tex.el")
 ;; (load "setup-js.el")
 ;; (load "slime.el")
 

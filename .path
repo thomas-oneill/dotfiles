@@ -1,4 +1,4 @@
 #!/bin/bash
 
-PATH=$PATH:$HOME/go/bin:$HOME/.cabal/bin
+PATH=$PATH:$HOME/bin:$HOME/go/bin:$HOME/.cabal/bin
 export PATH
