@@ -1,0 +1,82 @@
+! special
+*.foreground:   #ffffff
+*.background:   #161616
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #222222
+*.color8:       #666666
+
+! red
+*.color1:       #e84f4f
+*.color9:       #d23d3d
+
+! green
+*.color2:       #b7ce42
+*.color10:      #bde077
+
+! yellow
+*.color3:       #fea63c
+*.color11:      #ffe863
+
+! blue
+*.color4:       #66aabb
+*.color12:      #aaccbb
+
+! magenta
+*.color5:       #b7416e
+*.color13:      #e16a98
+
+! cyan
+*.color6:       #6d878d
+*.color14:      #42717b
+
+! white
+*.color7:       #dddddd
+*.color15:      #cccccc
+
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+XTerm*eightBitInput: false
+XTerm*backarrowKey: false
+XTerm*ttyModes: erase ^?
+XTerm*saveLines: 4096
+XTerm*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+!XTerm*reverseVideo: on
+XTerm*selectToClipboard: true
+XTerm*faceName: Ubuntu Mono
+XTerm*faceSize: 12
+
+UXTerm*locale: true
+UXTerm*metaSendsEscape: true
+UXTerm*eightBitInput: false
+UXTerm*backarrowKey: false
+UXTerm*ttyModes: erase ^?
+UXTerm*saveLines: 4096
+UXTerm*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+!UXTerm*reverseVideo: on
+UXTerm*selectToClipboard: true
+UXTerm*faceName: Ubuntu Mono
+UXTerm*faceSize: 12
+
+URxvt*selectToClipboard: true
+URxvt*scrollBar: false
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt*secondaryScreen: 1
+URxvt*secondaryScroll: 0
+URxvt*font: xft:Ubuntu Mono:pixelsize=16,style=regular
+URxvt*letterSpace: 0
+
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.perl-ext: default,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+URxvt*iso14755: False
+
