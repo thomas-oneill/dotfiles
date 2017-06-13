@@ -79,4 +79,3 @@
 
 (delete-selection-mode 1)
 (transient-mark-mode 1)
-

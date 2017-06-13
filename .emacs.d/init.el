@@ -99,6 +99,8 @@
     jinja2-mode
 
     auctex
+
+    exec-path-from-shell
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -148,7 +150,7 @@
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
 ;; environment variables
-;; (load "shell-integration.el")
+(load "shell-integration.el")
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
@@ -186,8 +188,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(case-fold-search nil)
  '(cider-cljs-lein-repl
    "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/start-figwheel!) (figwheel-sidecar.repl-api/cljs-repl))")
+ '(evil-ex-search-case (quote smart))
+ '(evil-ex-substitute-case (quote sensitive))
  '(package-selected-packages
    (quote
     (elpy web-mode terraform-mode tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous geiser exec-path-from-shell evil company-go clojure-mode-extra-font-locking cider))))

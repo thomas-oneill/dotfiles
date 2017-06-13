@@ -160,10 +160,12 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        font pango:Ubuntu Mono 10, FontAwesome 8
         status_command i3status
+
 }
 
-set $Locker dm-tool lock && sleep 1
+set $Locker dm-tool lock
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -187,5 +189,10 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 bindsym $mod+Shift+i exec imgur-screenshot
 
+bindsym $mod+Shift+d exec setxkbmap de
+bindsym $mod+Shift+u exec setxkbmap us
+bindsym $mod+Shift+g exec setxkbmap gb
+
+exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio 
