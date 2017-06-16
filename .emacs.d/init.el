@@ -70,23 +70,23 @@
 
     ;; Evil mode for Vim stuff
     evil
-	undo-tree
+    undo-tree
 
-	;; Web mode for HTML/JS/CSS
-	web-mode
+    ;; Web mode for HTML/JS/CSS
+    web-mode
 
-	;; Geiser for Scheme
-	geiser
+    ;; Geiser for Scheme
+    geiser
 
-	;; Company for auto-completion
-	company
+    ;; Company for auto-completion
+    company
 
-	;; Golang
-	go-mode
-	company-go
+    ;; Golang
+    go-mode
+    company-go
 
-	;; Terraform
-	terraform-mode
+    ;; Terraform
+    terraform-mode
 
     elpy
 
