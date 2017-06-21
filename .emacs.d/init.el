@@ -101,6 +101,8 @@
     auctex
 
     exec-path-from-shell
+
+    backward-forward
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user

@@ -61,3 +61,6 @@
 ;; (projectile-global-mode)
 ;; (defadvice projectile-project-root (around ignore-remote first activate)
 ;;   (unless (file-remote-p default-directory) ad-do-it))
+
+(setf backward-forward-evil-compatibility-mode t) ;the line to the left is optional, and recommended only if you are using evil mode
+(backward-forward-mode t)

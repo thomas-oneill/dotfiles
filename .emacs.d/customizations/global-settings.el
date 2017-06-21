@@ -40,3 +40,5 @@
 (blink-cursor-mode 1)
 (setq blink-cursor-blinks 0)
 (desktop-save-mode 1)
+
+(prefer-coding-system 'utf-8-unix)
