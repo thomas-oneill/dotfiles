@@ -5,17 +5,15 @@ mkd() {
 	mkdir -p "$@" && cd "$@"
 }
 
-cms() {
-    source ~/resty
+rest() {
+	source ~/resty
 	case $1 in
-        live) resty https://cms-api.eu.clara.net/loki/rest -u "$USER:$(pass clara/ad/$USER)" ;;
-        staging) resty https://cms-api-staging.star.net.uk/loki/rest -u "$USER:$(pass clara/ad/$USER)" ;;
-        dev) resty http://localhost:8080/loki/rest -u "$USER:$(pass clara/ad/$USER)" ;;
+		github) resty https://api.github.com -H "Authorization: token $(pass github/api-tokens/gists)" ;;
 	esac
 }
 
 ptpb() {
-    curl -F "c=@${1:--}" https://ptpb.pw/
+	curl -F "c=@${1:--}" https://ptpb.pw/
 }
 
 ppid() { ps -p ${1:-$$} -o ppid=; }
@@ -24,3 +22,4 @@ cperr() { "$@" 2>&1 | >/dev/null pbcopy; }
 
 al() { ag "$@" --pager='less -R'; }
 
+jql() { jq . -C | less -R; }

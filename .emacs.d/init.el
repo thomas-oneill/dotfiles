@@ -103,6 +103,10 @@
     exec-path-from-shell
 
     backward-forward
+
+    helm
+
+    markdown-mode
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -174,7 +178,7 @@
 (load "setup-web.el")
 (load "setup-go.el")
 (load "setup-tex.el")
-;; (load "setup-js.el")
+(load "setup-js.el")
 ;; (load "slime.el")
 
 (load "global-settings.el")

@@ -20,3 +20,7 @@
             (setq coffee-cleanup-whitespace nil)))
 (custom-set-variables
  '(coffee-tab-width 2))
+
+(add-to-list 'load-path "/usr/lib/node_modules/tern/bin/tern")
+(autoload 'tern-mode "/usr/lib/node_modules/tern/emacs/tern.el" nil t)
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))

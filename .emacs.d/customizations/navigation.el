@@ -64,3 +64,6 @@
 
 (setf backward-forward-evil-compatibility-mode t) ;the line to the left is optional, and recommended only if you are using evil mode
 (backward-forward-mode t)
+
+(require 'helm-config)
+(helm-mode 1)
