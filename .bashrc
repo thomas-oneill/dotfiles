@@ -8,7 +8,7 @@ case $SHELL in
 */zsh)
   ;;
 */bash)
-  for file in ~/.{aliases,bash_prompt,exports,functions,path,secrc}; do
+  for file in ~/.{aliases,bash_prompt,exports,functions,path,secrc,gcloudrc}; do
     [[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
   done
   unset file

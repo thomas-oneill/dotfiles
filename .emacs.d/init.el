@@ -197,6 +197,7 @@
  '(case-fold-search nil)
  '(cider-cljs-lein-repl
    "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/start-figwheel!) (figwheel-sidecar.repl-api/cljs-repl))")
+ '(coffee-tab-width 2)
  '(evil-ex-search-case (quote smart))
  '(evil-ex-substitute-case (quote sensitive))
  '(package-selected-packages
