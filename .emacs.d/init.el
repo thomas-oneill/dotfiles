@@ -169,6 +169,9 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
+;; helm
+(load "setup-helm.el")
+
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-web.el")
@@ -214,4 +217,3 @@
 ;; (setq lisp-indent-offset 2)
 (put 'upcase-region 'disabled nil)
 
-(elpy-enable)
