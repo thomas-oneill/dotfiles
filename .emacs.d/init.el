@@ -158,10 +158,6 @@
 ;; environment variables
 (load "shell-integration.el")
 
-;; These customizations make it easier for you to navigate files,
-;; switch buffers, and choose options from the minibuffer.
-(load "navigation.el")
-
 ;; These customizations change the way emacs looks and disable/enable
 ;; some user interface elements
 (load "ui.el")
@@ -179,12 +175,17 @@
 (load "setup-go.el")
 (load "setup-tex.el")
 (load "setup-js.el")
+(load "setup-python.el")
 ;; (load "slime.el")
 
 (load "global-settings.el")
 (load "functions.el")
 (load "bindings.el")
 ;; (load "setup-scheme.el")
+
+;; These customizations make it easier for you to navigate files,
+;; switch buffers, and choose options from the minibuffer.
+(load "navigation.el")
 
 ;; These customizations make editing a bit nicer.
 (load "editing.el")
