@@ -188,6 +188,7 @@ bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 bindsym $mod+Shift+i exec imgur-screenshot
+bindsym $mod+Shift+p exec escrotum -s -C
 bindsym $mod+p exec passmenu
 
 bindsym $mod+Shift+d exec setxkbmap de
