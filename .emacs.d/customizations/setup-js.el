@@ -21,6 +21,6 @@
 (custom-set-variables
  '(coffee-tab-width 2))
 
-(add-to-list 'load-path "/usr/lib/node_modules/tern/bin/tern")
-(autoload 'tern-mode "/usr/lib/node_modules/tern/emacs/tern.el" nil t)
+(add-to-list 'load-path "/home/tomato/.nvm/versions/node/v8.1.4/bin/tern")
+(autoload 'tern-mode "/home/tomato/.nvm/versions/node/v8.1.4/lib/node_modules/tern/emacs/tern.el" nil t)
 (add-hook 'js-mode-hook (lambda () (tern-mode t)))

@@ -25,3 +25,5 @@ al() { ag "$@" --pager='less -R'; }
 jql() { jq . -C | less -R; }
 
 pawk() { awk -vy="$1" -vx="$2" 'NR==y{print $x}'; }
+
+delete_all_gists() { rest github && GET /gists | jq .[].id -r | while IFS=; read -r line; do DELETE /gists/$line & done; }
