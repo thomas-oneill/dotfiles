@@ -1,5 +1,5 @@
 #!/bin/bash
 
 alias ls='ls --color=always'
-alias xc='xclip -selection clipboard'
+alias xc='xclip -i -sel p -f | xclip -f -i -sel c | xclip -i -sel s'
 alias less='less -R'

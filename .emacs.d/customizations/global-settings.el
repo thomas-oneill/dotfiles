@@ -42,3 +42,8 @@
 (desktop-save-mode 1)
 
 (prefer-coding-system 'utf-8-unix)
+
+(require 'powerline)
+(require 'powerline-evil)
+(powerline-evil-center-color-theme)
+

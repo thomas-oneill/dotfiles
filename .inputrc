@@ -4,3 +4,8 @@
 "\e[B":history-search-forward
 
 "\C-o":unix-filename-rubout
+
+set meta-flag on
+set input-meta on
+set convert-meta on
+set output-meta on

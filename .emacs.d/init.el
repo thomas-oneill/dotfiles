@@ -169,6 +169,9 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
+;; Org
+(load "setup-org.el")
+
 ;; helm
 (load "setup-helm.el")
 
