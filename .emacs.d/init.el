@@ -107,6 +107,13 @@
     helm
 
     markdown-mode
+
+    powerline
+    powerline-evil
+
+    org
+
+    elm-mode
 ))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -205,11 +212,14 @@
  '(cider-cljs-lein-repl
    "(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/start-figwheel!) (figwheel-sidecar.repl-api/cljs-repl))")
  '(coffee-tab-width 2)
+ '(custom-safe-themes
+   (quote
+	("01e067188b0b53325fc0a1c6e06643d7e52bc16b6653de2926a480861ad5aa78" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
  '(evil-ex-search-case (quote smart))
  '(evil-ex-substitute-case (quote sensitive))
  '(package-selected-packages
    (quote
-    (elpy web-mode terraform-mode tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous geiser exec-path-from-shell evil company-go clojure-mode-extra-font-locking cider))))
+	(emmet-mode yasnippet vue-mode ox-gfm org elpy web-mode terraform-mode tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous geiser exec-path-from-shell evil company-go clojure-mode-extra-font-locking cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

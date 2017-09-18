@@ -7,3 +7,7 @@
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-enable-auto-quoting nil)
+(require 'vue-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.1
+(add-hook 'web-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
