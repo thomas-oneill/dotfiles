@@ -32,7 +32,6 @@
     ;; magit
     ;; markdown-mode
     ;; org
-    ;; paredit
     ;; projectile
     ;; rainbow-delimiters
     ;; smex
@@ -40,17 +39,27 @@
     ;; terraform-mode
     ;; yaml-mode
     counsel
+    dired-details
+    emmet-mode
     evil
     ivy
     ivy-hydra
+    js2-mode
     nlinum-relative
+    nodejs-repl
+    paredit
     powerline
     powerline-evil
+    rainbow-mode
+    scss-mode
+    smex
     swiper
     undo-tree
+    use-package
     vue-mode
     web-mode
-))
+    yasnippet))
+
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
@@ -58,6 +67,9 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/conf")
 
-(load "global-settings.el")
-(load "funcs-and-binds.el")
-(load "setup-web.el")
+(load "01-soft-globals.el")
+(load "02-soft-funcs-and-binds.el")
+(load "03-setup-web.el")
+(load "03-setup-org.el")
+(load "04-hard-globals.el")
+(put 'downcase-region 'disabled nil)
