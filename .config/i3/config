@@ -198,3 +198,7 @@ bindsym $mod+Shift+g exec setxkbmap gb
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio 
+
+exec --no-startup-id /usr/bin/autocutsel -f -s PRIMARY
+exec --no-startup-id /usr/bin/autocutsel -f -s CLIPBOARD
+exec --no-startup-id /usr/bin/autocutsel -f -s SECONDARY
