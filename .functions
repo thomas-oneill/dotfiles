@@ -22,7 +22,7 @@ cperr() { "$@" 2>&1 | >/dev/null pbcopy; }
 
 al() { ag "$@" --pager='less -R'; }
 
-jql() { jq . -C | less -R; }
+jql() { jq ."$@" -C | less -R; }
 
 pawk() { awk -vy="$1" -vx="$2" 'NR==y{print $x}'; }
 

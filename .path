@@ -1,4 +1,4 @@
 #!/bin/bash
 
-PATH=$PATH:$HOME/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/.yarn/bin
+PATH=$PATH:$HOME/bin:$GOPATH/bin:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.gem/ruby/2.4.0/bin
 export PATH

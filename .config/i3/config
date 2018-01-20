@@ -30,7 +30,7 @@ font pango:Ubuntu Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt -mod mod1
+bindsym $mod+Return exec urxvtc -mod mod1
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -189,7 +189,7 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 bindsym $mod+Shift+i exec imgur-screenshot
 bindsym $mod+Shift+p exec escrotum -s -C
-bindsym $mod+p exec passmenu
+bindsym $mod+p exec passmenu --type
 
 bindsym $mod+Shift+d exec setxkbmap de
 bindsym $mod+Shift+u exec setxkbmap us

@@ -13,7 +13,6 @@
   '(
     ;; alda-mode
     ;; auctex
-    ;; backward-forward
     ;; cider
     ;; clojure-mode
     ;; clojure-mode-extra-font-locking
@@ -30,7 +29,6 @@
     ;; ivy
     ;; jinja2-mode
     ;; magit
-    ;; markdown-mode
     ;; org
     ;; projectile
     ;; rainbow-delimiters
@@ -38,13 +36,16 @@
     ;; tagedit
     ;; terraform-mode
     ;; yaml-mode
+    backward-forward
     counsel
     dired-details
     emmet-mode
     evil
+    flymd
     ivy
     ivy-hydra
     js2-mode
+    markdown-mode
     nlinum-relative
     nodejs-repl
     paredit
@@ -71,5 +72,6 @@
 (load "02-soft-funcs-and-binds.el")
 (load "03-setup-web.el")
 (load "03-setup-org.el")
+(load "03-setup-sh.el")
 (load "04-hard-globals.el")
 (put 'downcase-region 'disabled nil)
