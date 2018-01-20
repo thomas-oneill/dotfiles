@@ -1,3 +1,0 @@
-#!/bin/bash
-
-al() { ag "$@" --pager='less -R'; }
