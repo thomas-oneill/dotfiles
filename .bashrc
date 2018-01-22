@@ -8,13 +8,11 @@ case $SHELL in
 */zsh)
   ;;
 */bash)
-  for file in ~/.{aliases,bash_prompt,exports,functions,path,secrc,gcloudrc}; do
+  for file in ~/.{aliases,bash_prompt,exports,functions,path}; do
     [[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
   done
   unset file
 esac
-
-source <(kubectl completion bash)
 
 # Test for an interactive shell.  There is no need to set anything
 # past this point for scp and rcp, and it's important to refrain from
@@ -126,7 +124,3 @@ if ! shopt -oq posix; then
         done
     fi
 fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
