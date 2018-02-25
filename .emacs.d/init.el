@@ -52,6 +52,7 @@
     powerline
     powerline-evil
     rainbow-mode
+    rust-mode
     scss-mode
     smex
     swiper
@@ -73,5 +74,6 @@
 (load "03-setup-web.el")
 (load "03-setup-org.el")
 (load "03-setup-sh.el")
+(load "03-setup-rust.el")
 (load "04-hard-globals.el")
 (put 'downcase-region 'disabled nil)
