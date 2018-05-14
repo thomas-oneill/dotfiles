@@ -44,7 +44,7 @@ XTerm*saveLines: 4096
 XTerm*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 !XTerm*reverseVideo: on
 XTerm*selectToClipboard: true
-XTerm*faceName: Ubuntu Mono
+XTerm*faceName: Ubuntu Mono derivative Powerline
 XTerm*faceSize: 12
 
 UXTerm*locale: true
@@ -56,7 +56,7 @@ UXTerm*saveLines: 4096
 UXTerm*VT100.Translations: #override Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
 !UXTerm*reverseVideo: on
 UXTerm*selectToClipboard: true
-UXTerm*faceName: Ubuntu Mono
+UXTerm*faceName: Ubuntu Mono derivative Powerline
 UXTerm*faceSize: 12
 
 URxvt*selectToClipboard: true
@@ -66,7 +66,7 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
-URxvt*font: xft:Ubuntu Mono:pixelsize=16,style=regular
+URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=16,style=regular
 URxvt*letterSpace: 0
 
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
