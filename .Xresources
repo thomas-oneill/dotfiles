@@ -66,7 +66,9 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 URxvt*secondaryScreen: 1
 URxvt*secondaryScroll: 0
-URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=16,style=regular
+URxvt*font: xft:Ubuntu Mono derivative Powerline:pixelsize=16,style=regular, \
+xft:Noto Color Emoji, \
+xft:Symbola
 URxvt*letterSpace: 0
 
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
